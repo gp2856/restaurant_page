@@ -1,2 +1,3 @@
-import "./createHome.js"
+import { homeFunc } from './home.js';
+homeFunc();
 console.log("Test");
