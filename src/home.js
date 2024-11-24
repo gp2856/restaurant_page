@@ -2,7 +2,7 @@ import logoImage from './assets/logo.webp';
 import exterior from './assets/exterior.webp';
 import interior from './assets/interior.webp';
 
-export const homeFunc = (function () {
+export const Home = (function () {
     const content = document.getElementById('content');
     content.innerHTML = '';
 
