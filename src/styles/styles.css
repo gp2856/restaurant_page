@@ -20,10 +20,35 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #6D5845;
     font-weight: bold;
     padding: 10px;
     background-image: url('../assets/background.webp');
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    /* Use the same background image */
+    filter: blur(3px) brightness(0.6);
+    /* Apply the blur and darken effects */
+    z-index: 1;
+    /* Keep it behind the text */
+    transform: scale(1.1);
+    /* Slight scaling to handle edge blurring */
+}
+
+
+nav,
+.nav-info {
+    position: relative;
+    z-index: 2;
 }
 
 button {
@@ -38,7 +63,8 @@ button:hover {
     background-color: #B49A7B;
 }
 
-nav {
+
+.nav {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -51,7 +77,6 @@ nav {
 .nav-info {
     margin-left: auto;
     margin-right: 2.5rem;
-    color: #2E2A22;
     font-size: clamp(5px, 1rem, 2rem);
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
@@ -207,4 +232,29 @@ nav {
 
 .footer-spacer {
     height: 2rem;
+}
+
+/* contact.js */
+.contact-info {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.contact {
+    width: 95%;
+    border-radius: 1rem;
+    background-color: #2E2A22;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-image {
+    margin-top: 2rem;
+    border-radius: 1rem;
+    height: 20rem;
+    justify-self: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
