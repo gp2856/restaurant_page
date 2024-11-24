@@ -7,8 +7,11 @@
     font-style: normal;
 }
 
+
+
 body {
     font-family: 'Cinzel';
+    color: #F5EDE0;
     background-color: #1C1A14;
     /* Deep Espresso Brown */
     background-image: url('../assets/background.webp');
@@ -18,7 +21,6 @@ body {
 
 header {
     background-color: #6D5845;
-    color: #F5EDE0;
     font-weight: bold;
     padding: 10px;
     background-image: url('../assets/background.webp');
@@ -26,7 +28,6 @@ header {
 
 button {
     background-color: #997F5B;
-    color: #F5EDE0;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -45,6 +46,16 @@ nav {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-info {
+    margin-left: auto;
+    margin-right: 2.5rem;
+    color: #2E2A22;
+    font-size: clamp(5px, 1rem, 2rem);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    flex-shrink: 0;
 }
 
 .imageDiv {
@@ -106,6 +117,48 @@ nav {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* menu.js */
+.menu-header {
+    font-size: 5.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.menu {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.menu-list {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: start;
+    padding-left: 1rem;
+}
+
+.display-info {
+    display: grid;
+    grid-column: 2/3;
+    justify-items: center;
+    align-self: start;
+    gap: 1rem;
+    width: 100%;
+    padding-top: 4rem;
+    max-width: 400px;
+}
+
+.p0 {
+    font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+    text-shadow: rgb(166, 124, 0);
+    margin: 0;
+    padding-top: 1.6rem;
+}
+
 .p1 {
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
@@ -113,7 +166,45 @@ nav {
     margin: 0;
     display: grid;
     grid-template-columns: auto auto;
-    border-bottom: 3px solid #D1B88F;
+    border-bottom: 2px solid #D1B88F;
     margin-bottom: 20px;
     padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.p1.selected {
+    color: #D1B88F;
+}
+
+.p1:hover {
+    color: #ffd700;
+    cursor: pointer;
+}
+
+.price-span {
+    justify-self: end;
+}
+
+.menu-span {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2E2A22;
+    color: #F5EDE0;
+    text-align: center;
+    font-size: 0.8rem;
+
+}
+
+.footer-spacer {
+    height: 2rem;
 }

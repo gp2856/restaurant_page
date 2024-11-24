@@ -1,8 +1,8 @@
-    import logoImage from './assets/logo.webp';
-    import exterior from './assets/exterior.webp';
-    import interior from './assets/interior.webp';
+import logoImage from './assets/logo.webp';
+import exterior from './assets/exterior.webp';
+import interior from './assets/interior.webp';
 
-    export const homeFunc = (function() {
+export const homeFunc = (function () {
     const content = document.getElementById('content');
     content.innerHTML = '';
 
@@ -29,7 +29,7 @@
     const imageDiv = document.createElement('div');
     imageDiv.classList.add('imageDiv');
     welcomeMessage.appendChild(imageDiv);
-    
+
     const exteriorImage = document.createElement('img');
     exteriorImage.src = exterior;
     exteriorImage.classList.add('dish-image');
@@ -42,4 +42,30 @@
 
     welcomeMessage.classList.add('welcome-message', 'home-items');
     homeContents.appendChild(welcomeMessage);
+
+    let hours = document.createElement('div');
+    hours.innerHTML = `
+    <h3 class='p1'>Hours of Operation:</h3>
+    Open Daily:<br/>
+    <ul>
+        <li> Monday to Thursday: 11:00 AM - 10:00 PM </li>
+        <li> Friday to Saturday: 11:00 AM - 12:00 AM </li>
+        <li> Sunday: 12:00 PM - 9:00 PM </li>
+    </ul>
+    <em>Experience the magic from lunch to late night!</em>`
+    hours.classList.add('hours', 'home-items');
+    homeContents.append(hours);
+
+    let location = document.createElement('div');
+    location.innerHTML = `
+    <h3>Find us at:</h3>
+    The Wandering Cauldron<br/>
+    221 Enchanted Alley, Hogsmeade Village<br/><br/>
+    <em>Nesteled in the heart of Hogsmeade, just a broomstick's ride from Hogwarts Express Station!</em>`
+    location.classList.add('location', 'home-items');
+    homeContents.append(location);
+
+    const footerSpacer = document.createElement('div');
+    footerSpacer.classList.add('footer-spacer');
+    content.appendChild(footerSpacer);
 })
