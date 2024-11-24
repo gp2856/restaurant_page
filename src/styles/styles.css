@@ -113,4 +113,7 @@ nav {
     margin: 0;
     display: grid;
     grid-template-columns: auto auto;
+    border-bottom: 3px solid #D1B88F;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
